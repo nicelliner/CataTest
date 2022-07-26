@@ -8,7 +8,7 @@ public class Main {
         System.out.println("\nInput:");
         String str = in.nextLine();
         System.out.println("\nOutput:");
-            System.out.println(calc(str));
+        System.out.println(calc(str));
     }
 
     public static String calc(String input) {
@@ -85,7 +85,7 @@ public class Main {
                 default: throw new IOException();
             }
         } catch (IOException e) {
-            System.out.println("Используются разные систекмы координат");
+            System.out.println("Используются разные системы координат");
             System.exit(0);
             return 0;
         }
