@@ -14,6 +14,8 @@ public class Main {
     public static String calc(String input) {
         try {
             String[] temp = input.split(" ");
+            if (temp.length != 3)
+                throw new IOException();
 
             boolean romanCheck = false;
             if (temp[0].charAt(0) > (int) '9') {
@@ -49,9 +51,7 @@ public class Main {
             }
             return String.valueOf(result);
 
-        } catch (RuntimeException e) {
-            return "Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)";
-        } catch (IOException e) {
+        } catch (IOException | RuntimeException e) {
             return "Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)";
         }
     }
